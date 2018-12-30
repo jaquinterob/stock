@@ -1,0 +1,6 @@
+table {
+    width: 100%;
+    display: table;
+      border-collapse: unset !important;
+    border-spacing: 0;
+}
