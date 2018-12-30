@@ -10,40 +10,32 @@
     <title>Stock</title>
   </head>
   <body>
+    <!-- Modal Structure -->
+    <div id="modal_agregar_articulo_" class="modal">
+      <div class="modal-content">
+        <h5 style="text-align:center">Nuevo Artículo</h5 style="text-align:center">
+        <div class="row center-align">
+          <form id="form_agregar_articulo">
+            <div class="input-field col s10  offset-s1">
+              <input id="nombre_articulo" name="nombre_articulo" type="text" class="validate" autofocus>
+              <label for="nombre_articulo">Nombre artículo</label>
+            </div>
+            <div class="input-field col s6 offset-s1">
+              <input id="cantidad_inicial" name="cantidad_inicial" type="number" class="validate">
+              <label for="cantidad_inicial">Cantidad inical</label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a  class="modal-close waves-effect waves-green btn-flat">cancelar</a>
+        <a onclick="agregar_articulo()" class="waves-effect waves-green btn-flat">Agregar</a>
+      </div>
+    </div>
+
     <div class="row" id="contenedor_articulos">
-
-      <div class="col s12 m4 l3">
-        <div class="card center-align">
-          <div class="card-content">
-            <span class="card-title">Teclados malos y raron</span>
-            <table class="highlight centered">
-              <tbody >
-                <tr>
-                  <td><a  onclick="quitar()" class="btn-floating btn-medium waves-effect waves-light green"><i class="material-icons">remove</i></a></td>
-                  <td><span id="teclado" style="font-size:40px;color:grey;">100</span></td>
-                  <td><a  onclick="poner()" class="btn-floating btn-medium waves-effect waves-light green"><i class="material-icons">add</i></a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s12 m4 l3">
-        <div class="card center-align">
-          <div class="card-content">
-            <table class="highlight centered">
-              <tbody >
-                <tr>
-                  <td><a style="font-size:25px" class=" waves-effect waves-light">Nuevo Artículo</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
 
     </div>
   </body>
-<script src="js/stock.js" charset="utf-8"></script>
+  <script src="js/stock.js" charset="utf-8"></script>
 </html>
