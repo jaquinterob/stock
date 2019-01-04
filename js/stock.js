@@ -4,6 +4,10 @@ jq(document).ready(function() {
   inicialiaciones();
 });
 
+function inicialiaciones(){
+  carga_inicial();
+}
+
 function carga_inicial(){
   let datosFormulario='carga_inicial=1';
   jq.ajax({
@@ -20,16 +24,48 @@ function carga_inicial(){
   });
 }
 
-function inicialiaciones(){
-  carga_inicial();
-}
-
 function quitar(id){
-  jq("#teclado").text((parseInt(jq("#teclado").text())-1));
+  var datosFormulario='token_quitar='+id;
+  jq.ajax({
+    url:'includes/stock_includes.php',
+    type:'POST',
+    data:datosFormulario,
+    error:function(jq,status,str_error){
+      M.toast({html:"Error al procesar la solicitud, intente mas tarde, si el problema persiste comuníquelo al equipo de desarrollo"});
+    },
+    timeout:10000,
+    success:function(data){
+      data=data.trim();
+      var res=data.split('|');
+      if (res[0]=='1') {
+        carga_inicial();
+      } else {
+        M.toast({html:res[1],classes:'red'});
+      }
+    }
+  });
 }
 
 function poner(id){
-  jq("#teclado").text((parseInt(jq("#teclado").text())+1));
+  var datosFormulario='token_poner='+id;
+  jq.ajax({
+    url:'includes/stock_includes.php',
+    type:'POST',
+    data:datosFormulario,
+    error:function(jq,status,str_error){
+      M.toast({html:"Error al procesar la solicitud, intente mas tarde, si el problema persiste comuníquelo al equipo de desarrollo"});
+    },
+    timeout:10000,
+    success:function(data){
+      data=data.trim();
+      var res=data.split('|');
+      if (res[0]=='1') {
+        carga_inicial();
+      } else {
+        M.toast({html:res[1],classes:'red'});
+      }
+    }
+  });
 }
 
 function agregar_articulo(){
@@ -50,6 +86,7 @@ function agregar_articulo(){
           M.toast({html:res[1],classes:'blue'});
           carga_inicial();
           cerrar_modal("modal_agregar_articulo_");
+          jq(".formulario_agregar").val('');
         } else {
           M.toast({html:res[1],classes:'red'});
         }
@@ -89,4 +126,8 @@ function abrir_modal(id){
 function cerrar_modal(id){
   var instance = M.Modal.getInstance(jq("#"+id));
   instance.close();
+}
+
+function mostrar_historial(id){
+  M.toast({html:'si funciona el dbclick el id es: '+id,classes:'blue'});
 }

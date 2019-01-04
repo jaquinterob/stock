@@ -17,11 +17,13 @@
         <div class="row center-align">
           <form id="form_agregar_articulo">
             <div class="input-field col s10  offset-s1">
-              <input id="nombre_articulo" name="nombre_articulo" type="text" class="validate" autofocus>
+               <i class="material-icons prefix">keyboard</i>
+              <input id="nombre_articulo" name="nombre_articulo" type="text" autofocus class="validate  formulario_agregar" autofocus>
               <label for="nombre_articulo">Nombre artículo</label>
             </div>
             <div class="input-field col s6 offset-s1">
-              <input id="cantidad_inicial" name="cantidad_inicial" type="number" class="validate">
+              <i class="material-icons prefix">add</i>
+              <input id="cantidad_inicial" name="cantidad_inicial" type="number" class="validate formulario_agregar">
               <label for="cantidad_inicial">Cantidad inical</label>
             </div>
           </form>
@@ -32,8 +34,7 @@
         <a onclick="agregar_articulo()" class="waves-effect waves-green btn-flat">Agregar</a>
       </div>
     </div>
-
-    <div class="row" id="contenedor_articulos">
+    <div  class="row" id="contenedor_articulos">
 
     </div>
   </body>

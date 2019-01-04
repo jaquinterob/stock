@@ -16,6 +16,6 @@ table {
     width: 35% !important;
     margin: auto;
     overflow-y: auto;
-    border-radius: 2px;
+    border-radius: 7px !important;
     will-change: top, opacity;
-}
+  }
