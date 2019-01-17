@@ -6,10 +6,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="estilos.css">
     <meta charset="utf-8">
     <title>Stock</title>
   </head>
   <body>
+    <div class="social">
+  		<ul>
+  			<li><a href="http://www.facebook.com/falconmasters" target="_blank" class="icon-facebook"> <i class="material-icons">home</i></a></li>
+  			<li><a href="http://www.twitter.com/falconmasters" target="_blank" class="icon-twitter"><i class="material-icons">assignment</i></a></li>
+  			<li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-googleplus"><i class="material-icons">attach_money</i></a></li>
+  			<li><a href="http://www.pinterest.com/falconmasters" target="_blank" class="icon-pinterest"><i class="material-icons">show_chart</i></a></li>
+  			<li><a href="mailto:contacto@falconmasters.com" class="icon-mail"><i class="material-icons">insert_chart</i></a></li>
+        <li><a href="http://www.facebook.com/falconmasters" target="_blank" class="icon-facebook"> <i class="material-icons">business</i></a></li>
+        <li><a href="http://www.twitter.com/falconmasters" target="_blank" class="icon-twitter"><i class="material-icons">business_center</i></a></li>
+        <li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-googleplus"><i class="material-icons">verified_user</i></a></li>
+        <li><a href="http://www.pinterest.com/falconmasters" target="_blank" class="icon-pinterest"><i class="material-icons">vpn_key</i></a></li>
+        <li><a href="mailto:contacto@falconmasters.com" class="icon-mail"><i class="material-icons">wc</i></a></li>
+  		</ul>
+  	</div>
     <!-- Modal Structure -->
     <div id="modal_agregar_articulo_" class="modal">
       <div class="modal-content">
@@ -39,4 +54,5 @@
     </div>
   </body>
   <script src="js/stock.js" charset="utf-8"></script>
+  <script src="script.js"></script>
 </html>

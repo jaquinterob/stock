@@ -112,7 +112,5 @@ function nombre_disponible($nombre_articulo){
   }
 }
 
-
-
 $connect->close();
  ?>
